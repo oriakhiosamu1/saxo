@@ -1,0 +1,300 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* input:focus {
+    border: none;
+} */
+
+/* desktop view */
+@media screen and (min-width: 1024px) {
+
+    .register-box {
+        width: 50%;
+        height: 50%;
+        margin: 30px auto;
+        /* box-shadow: 0 0 1px rgb(163, 163, 163); */
+    }
+
+    .form {
+        /* background-color: #171717; */
+        background-color: transparent;
+        border-radius: 5px;
+        /* box-shadow: 0 0 1px grey; */
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+
+    .heading h3 {
+        color: #171717;
+        text-align: center;
+        margin: 20px auto;
+        font-weight: bold;
+    }
+
+    .form-input {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+    }
+
+    .form-control{
+        margin-bottom: 20px;
+    }
+
+    .form-control option {
+        background-color: #EBEBEB;
+        color: grey;
+    }
+
+    .form-input input{
+        background-color: rgb(235, 235, 235);
+        border: 1px solid white;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        height: 50px;
+        padding-left: 15px;
+        color: grey;
+        box-shadow:  0 0 1px rgb(212, 212, 212) ;
+    }
+
+    .submit {
+        margin: 10px auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .submit button {
+        width: 100%;
+        border-style: none;
+        background-color: #30AE69;
+        color: white;
+        font-weight: bold;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    .submit button:hover {
+        background-color: #171717;
+        height: 60px;
+        box-shadow: 0 0 3px rgb(63, 63, 63);
+    }
+
+    .already-have {
+        text-align: center;
+        color: grey;
+    }
+
+    .double-input {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .form-input select {
+        background-color: rgb(235, 235, 235) ;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        border-style: none;
+        color: grey;
+    }
+
+    .error-message{
+        text-align: center;
+    }
+
+    .error-message small {
+        color: red;
+    }
+
+}
+
+
+/* tablet view */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .register-box {
+        width: 80%;
+        height: 50%;
+        margin: 30px auto;
+        /* box-shadow: 0 0 1px rgb(163, 163, 163); */
+    }
+
+    .form {
+        /* background-color: #171717; */
+        background-color: transparent;
+        border-radius: 5px;
+        /* box-shadow: 0 0 1px grey; */
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+
+    .heading h3 {
+        color: #171717;
+        text-align: center;
+        margin: 20px auto;
+        font-weight: bold;
+    }
+
+    .form-input {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+    }
+
+    .form-input input{
+        background-color: rgb(235, 235, 235);
+        border: 1px solid white;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        height: 50px;
+        padding-left: 15px;
+        color: grey;
+        box-shadow:  0 0 1px rgb(212, 212, 212) ;
+    }
+
+    .submit {
+        margin: 10px auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .submit button {
+        width: 100%;
+        border-style: none;
+        background-color: #30AE69;
+        color: white;
+        font-weight: bold;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    .submit button:hover {
+        background-color: #171717;
+        height: 60px;
+        box-shadow: 0 0 3px rgb(63, 63, 63);
+    }
+
+    .already-have {
+        text-align: center;
+        color: grey;
+    }
+
+    .double-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-input select {
+        background-color: rgb(235, 235, 235) ;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        border-style: none;
+        color: grey;
+        margin-bottom: 20px;
+    }
+
+    /* .form-input option {
+        width: 80%;
+    } */
+}
+
+
+/* mobile view */
+@media screen and (max-width: 767px) {
+    .register-box {
+        width: 100%;
+        height: 50%;
+        margin: 30px auto;
+        /* box-shadow: 0 0 1px rgb(163, 163, 163); */
+    }
+
+    .form {
+        /* background-color: #171717; */
+        background-color: transparent;
+        border-radius: 5px;
+        /* box-shadow: 0 0 1px grey; */
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+
+    .heading h3 {
+        color: #171717;
+        text-align: center;
+        margin: 20px auto;
+        font-weight: bold;
+    }
+
+    .form-input {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+    }
+
+    .form-input input{
+        background-color: rgb(235, 235, 235);
+        border: 1px solid white;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        height: 50px;
+        padding-left: 15px;
+        color: grey;
+        box-shadow:  0 0 1px rgb(212, 212, 212) ;
+    }
+
+    .submit {
+        margin: 10px auto;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .submit button {
+        width: 100%;
+        border-style: none;
+        background-color: #30AE69;
+        color: white;
+        font-weight: bold;
+        height: 50px;
+        border-radius: 5px;
+    }
+
+    .submit button:hover {
+        background-color: #171717;
+        height: 60px;
+        box-shadow: 0 0 3px rgb(63, 63, 63);
+    }
+
+    .already-have {
+        text-align: center;
+        color: grey;
+    }
+
+    .double-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-input select {
+        background-color: rgb(235, 235, 235) ;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        border-radius: 5px;
+        border-style: none;
+        color: grey;
+        margin-bottom: 20px;
+    }
+}
