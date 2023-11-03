@@ -2,6 +2,12 @@
 
 namespace App\Providers;
 
+use App\Events\PasswordEvent;
+use App\Events\UpgradePlanEvent;
+use App\Events\WelcomeMailEvent;
+use App\Listeners\PasswordListener;
+use App\Listeners\UpgradePlanListener;
+use App\Listeners\WelcomeMailListener;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -18,6 +24,18 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+
+        WelcomeMailEvent::class => [
+            WelcomeMailListener::class,
+        ],
+
+        UpgradePlanEvent::class => [
+            UpgradePlanListener::class,
+        ],
+
+        PasswordEvent::class => [
+            PasswordListener::class,
+        ]
     ];
 
     /**

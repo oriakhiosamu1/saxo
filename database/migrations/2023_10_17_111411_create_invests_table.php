@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('invests', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('username');
+            $table->string('email');
             $table->string('amount');
             $table->string('proof');
             $table->string('type');

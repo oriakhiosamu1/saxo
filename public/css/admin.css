@@ -1,0 +1,243 @@
+body {
+    font-family: "Roboto", sans-serif;
+    color: grey;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* desktop view */
+@media screen and (min-width: 1024px) {
+
+    /* admin page/index page styles */
+    .view-all-users {
+        color: #171717;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .user-card-display-div {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .user-card {
+        border-radius: 5px;
+        box-shadow: 0 0 7px rgb(231, 231, 231);
+        padding: 15px 25px;
+        background-color: white;
+    }
+
+    .image-position {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .image-position img {
+        box-shadow: 0 0 5px rgb(207, 207, 207);
+        /* border-radius: 5px; */
+        border-radius: 50%;
+        object-fit: cover;
+
+    }
+
+    .user-name-and-email {
+        text-align: center;
+        font-weight: bold;
+        color: #171717;
+    }
+
+    .small {
+        color: rgb(190, 190, 190);
+    }
+
+    .view-profile-link {
+        padding: 30px auto;
+        text-align: center;
+        margin: 40px 20px;
+    }
+
+    .view-profile-link a {
+        padding: 10px 30px;
+        text-decoration: none;
+        color: white;
+        background-color: #171717;
+        border-radius: 20px;
+        font-size: 90%;
+        font-weight: bold;
+    }
+
+    /*user profile page design*/
+    .admin-user-page-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .user-image-div{
+        text-align: center;
+        font-weight: bold;
+        color: #171717;
+        padding: 30px;
+        width: 32%;
+        height: 70%;
+        background-color: white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgb(207, 207, 207);
+    }
+
+    .user-account-type {
+        font-size: 80%;
+        color: white;
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: 8px;
+        background-color: #171717;
+        margin-bottom: 10px;
+    }
+
+    .user-image-div small{
+        font-size: 80%;
+    }
+
+    .user-image-div span {
+        color: rgb(190, 190, 190);
+    }
+
+    .user-information-div {
+        background-color: white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgb(207, 207, 207);
+        width: 65%;
+        padding: 30px;
+        font-weight: bold;
+        color: #171717;
+    }
+
+    .user-information-input-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-self: stretch;
+    }
+
+    .user-name-input input{
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        border-style: solid;
+        padding-left: 10px;
+        color: grey;
+        border-color: rgb(219, 219, 219);
+    }
+
+    .user-name-input{
+        margin-top: 20px;
+        color: grey;
+        width: 100%;
+        margin-right: 10px;
+    }
+
+    .update-user-balances {
+        font-size: 80%;
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: 8px;
+        background-color: #171717;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .update-user-balances-submit button {
+        font-size: 80%;
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: 8px;
+        background-color: #171717;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        color: white;
+        border-style: none;
+    }
+
+    .update-user-balances a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Investment/cryptocurrency page */
+
+    .Investment-history {
+        padding: 20px;
+        font-weight: bold;
+        color: #171717;
+    }
+
+    .Investment-history small{
+        color: grey;
+        font-size: 80%;
+        font-weight: 400;
+    }
+
+    .accordion-box-div {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .accordion-body a {
+        text-decoration: none;
+    }
+
+    .accordion-body {
+        color: grey;
+    }
+
+    /* address page design starts here */
+    .coins-and-wallet-address-div {
+        margin: 20px auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items:normal;
+        font-weight: bold;
+        color: #171717;
+        font-size: 80%;
+    }
+
+    .coins {
+        width: 33%;
+    }
+
+    .coins h6{
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .coin-names {
+        padding: 15px 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgb(207, 207, 207);
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .coin-names img{
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+}

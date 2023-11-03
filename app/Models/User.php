@@ -30,8 +30,19 @@ class User extends Authenticatable
         'account_type',
         'referral_link',
         'isAdmin',
-        'payment_option'
+        'payment_option',
+        'balance',
+        'deposit',
+        'profit',
+        'ref_bonus',
+        'paid_with'
     ];
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.

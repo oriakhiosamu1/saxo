@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\WelcomeMailEvent;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,8 @@ class AuthController extends Controller
 
         $user = User::create($formField);
 
+        event(new WelcomeMailEvent($user));
+
         auth()->login($user);
 
         return redirect('dashboard')->with('message', 'Accounted created');
@@ -44,6 +47,10 @@ class AuthController extends Controller
 
         if(auth()->attempt($formField)){
             $request->session()->regenerate();
+
+            if(auth()->user()->isAdmin == true){
+                return redirect('admin_dashboard')->with('message', 'You are now logged in');
+            }
             return redirect('dashboard')->with('message', 'You are now logged in');
         }
 
@@ -52,7 +59,10 @@ class AuthController extends Controller
     }
 
     public function password(){
-        return view('guest.forget_password');
+        $user = auth()->user();
+        return view('guest.forget_password', [
+            'user' => $user,
+        ]);
     }
 
     public function logout(Request $request){

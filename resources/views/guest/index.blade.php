@@ -21,13 +21,13 @@
                       <div class="detail-box">
                         <div>
                           <h1>
-                            Digital Currency
+                            Saxotrade
                           </h1>
                           <h2>
-                            The Future of Trading.
+                            We trade Cryptocurrencies.
                           </h2>
                           <div class="">
-                            <a href="">
+                            <a href="register">
                               Get Started
                             </a>
                           </div>
@@ -51,13 +51,13 @@
                       <div class="detail-box">
                         <div>
                           <h1>
-                            Digital Currency
+                            Saxotrade
                           </h1>
                           <h2>
-                            The Future of Trading.
+                            We trade NFTs.
                           </h2>
                           <div class="">
-                            <a href="">
+                            <a href="register">
                               Get Started
                             </a>
                           </div>
@@ -81,12 +81,12 @@
                       <div class="detail-box">
                         <div>
                           <h1>
-                            Digital Currency
+                            Saxotrade
                           </h1>
                           <h2>
-                            The Future of Trading.
+                            We trade Forex.
                           </h2>
-                          <div class="">
+                          <div class="register">
                             <a href="">
                               Get Started
                             </a>
@@ -277,11 +277,11 @@
           </div>
         </div>
       </div>
-      <div class="btn-box">
+      {{-- <div class="btn-box">
         <a href="">
           Read More
         </a>
-      </div>
+      </div> --}}
     </section>
     <!-- end how section -->
 
@@ -395,7 +395,7 @@
         </div>
       </div>
       <div class="btn-box">
-        <a href="">
+        <a href="plans">
           Read More
         </a>
       </div>

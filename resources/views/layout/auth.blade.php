@@ -34,6 +34,9 @@
         <!-- custom style for mobile phone -->
         <link rel="stylesheet" href="{{ asset('css/mobile.css') }}">
 
+        {{-- custom style for tablet styles --}}
+        <link rel="stylesheet" href="{{ asset('css/tablet.css') }}">
+
     </head>
 
     <body>
@@ -72,7 +75,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Forex</a></li>
+                            <li><a class="dropdown-item" href="forex_invest">Forex</a></li>
                             </ul>
                         </li>
 
@@ -81,15 +84,15 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Exchanger</a>
+                            <a class="nav-link" href="exchanger">Exchanger</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Transactions</a>
+                            <a class="nav-link" href="transactions">Transactions</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Upgrade plan</a>
+                            <a class="nav-link" href="upgrade_plan">Upgrade plan</a>
                         </li>
 
                         <li class="nav-item dropdown">
@@ -136,7 +139,7 @@
 
                 <div class="nav-menu">
                     <div class="icon">
-                        <img src="images/dashboard icon.png" alt="dashboard" width="40">
+                        <img src="{{ asset('images/dashboard icon.png') }}" alt="dashboard" width="40">
                     </div>
                     <div class="menu">
                         <a href="dashboard">Dashboard</a>
@@ -145,16 +148,24 @@
 
                 <div class="nav-menu">
                     <div class="icon">
-                        <img src="images/invest 01.png" alt="dashboard" width="40">
+                        <img src="{{ asset('images/invest 01.png') }}" alt="dashboard" width="40">
                     </div>
-                    <div class="menu">
-                        <a href="invest">Invest</a>
+                    <div class="dropdown">
+                        <a class="menu fw-bold ms-2 dropdown-toggle" href="admin_invest" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Invest
+                        </a>
+
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="invest">Cryptocurency</a></li>
+                          <li><a class="dropdown-item" href="#">NFTs</a></li>
+                          <li><a class="dropdown-item" href="#">Forex</a></li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="nav-menu">
                     <div class="icon">
-                        <img src="images/withdraw.png" alt="dashboard" width="40">
+                        <img src="{{ asset('images/withdraw.png') }}" alt="dashboard" width="40">
                     </div>
                     <div class="menu">
                         <a href="withdraw">Withdraw</a>
@@ -163,46 +174,45 @@
 
                 <div class="nav-menu">
                     <div class="icon">
-                        <img src="images/exchange.png" alt="dashboard" width="40">
+                        <img src="{{ asset('images/exchange.png') }}" alt="dashboard" width="40">
                     </div>
                     <div class="menu">
-                        <a href="exchanger.html">Exchanger</a>
+                        <a href="exchanger">Exchanger</a>
                     </div>
                 </div>
 
                 <div class="nav-menu">
                     <div class="icon">
-                        <img src="images/transact.png" alt="dashboard" width="40">
+                        <img src="{{ asset('images/transact.png') }}" alt="dashboard" width="40">
                     </div>
                     <div class="menu">
-                        <a href="transaction.html">Transaction</a>
+                        <a href="transactions">Transaction</a>
                     </div>
                 </div>
 
                 <div class="nav-menu">
                     <div class="icon">
-                        <img src="images/transact.png" alt="dashboard" width="40">
+                        <img src="{{ asset('images/upgrade2.png') }}" alt="dashboard" width="40">
                     </div>
                     <div class="menu">
-                        <a href="change_plan.html">Upgrade Plan</a>
+                        <a href="upgrade_plan">Upgrade Plan</a>
                     </div>
                 </div>
 
                 <div class="nav-menu">
                     <div class="icon">
-                        <img src="images/user-image 01.png" alt="dashboard" width="40">
+                        <img src="{{ asset('images/user-image 01.png') }}" alt="dashboard" width="40">
                     </div>
-                    <div class="menu">
-                        <a href="profile.html">Profile</a>
-                    </div>
-                </div>
+                    <div class="dropdown">
+                        <a class="menu fw-bold ms-2 dropdown-toggle" href="admin_invest" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Account
+                        </a>
 
-                <div class="nav-menu">
-                    <div class="icon">
-                        <img src="images/user-image 01.png" alt="dashboard" width="40">
-                    </div>
-                    <div class="menu">
-                        <a href="auth/logout">Logout</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="profile">Profile</a></li>
+                          <li><a class="dropdown-item" href="update_profile">Edit Profile</a></li>
+                          <li><a class="dropdown-item" href="auth/logout">Logout</a></li>
+                        </ul>
                     </div>
                 </div>
 
@@ -212,6 +222,10 @@
 
 
         </div>
+
+        {{-- custom js scripts --}}
+        <script src="{{ asset('js/copy.js') }}"></script>
+        {{-- end of custom js script --}}
 
 
         <!-- bootstrap js bundle start -->

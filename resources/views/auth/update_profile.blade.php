@@ -10,6 +10,7 @@
     <div class="update-profile-card">
         <form action="auth/update/{{ $user->id }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method("PUT")
 
             <div class="email-country">
                 <div class="email">

@@ -9,6 +9,15 @@
         <h2>Invest by using BTC</h2>
     </div>
 
+        {{-- start of session message --}}
+        @if (session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session('message') }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+        {{-- end of session message --}}
+
     <div class="address-card">
         <div class="address">
             <div class="logo">
@@ -22,7 +31,7 @@
             <div class="four-digit-pin">
                 <div class="pin">
                     <label for="email">OUR WALLET ADDRESS:</label>
-                    <input type="text" name="" id="" disabled >
+                    <input type="text" value="1DXANvrBJ2gKbAGQnoJZetaeZb2pCGGMG6" name="" id="textToCopy" disabled >
                 </div>
             </div>
 
@@ -34,12 +43,12 @@
             </div>
 
             <div class="confirmation">
-                <button><a href="">Copy our wallet address</a></button>
+                <button id="copyButton">Copy our wallet address</button>
             </div>
         </div>
 
         <div class="address">
-            <form action="invest/bitcoin" method="POST" enctype="multipart/form-data">
+            <form action="invest/bitcoin/{{ Auth::id() }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="wallet-address">

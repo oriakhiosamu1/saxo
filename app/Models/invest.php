@@ -14,5 +14,8 @@ class invest extends Model
         'amount',
         'type',
         'proof',
+        'account_type',
+        'username',
+        'email',
     ];
 }

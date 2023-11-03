@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('username');
+            $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('mobile_number');
             $table->string('plans');
@@ -23,10 +23,15 @@ return new class extends Migration
             $table->string('payment_option');
             $table->string('profile_picture')->nullable();
             $table->boolean('isAdmin')->default(false);
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->string('pin')->nullable();
             $table->string('referral_link')->nullable();
+            $table->string('paid_with')->nullable();
+            $table->string('balance')->default(0)->nullable();
+            $table->string('deposit')->default(0)->nullable();
+            $table->string('profit')->default(0)->nullable();
+            $table->string('ref_bonus')->default(0)->nullable();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });

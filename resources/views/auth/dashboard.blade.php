@@ -21,10 +21,10 @@
                 <h4>{{ $username }}-dormant</h4>
             </div>
             <div class="dollar">
-                <p>$ 0</p>
+                <p>{{ $user->balance }} {{ $user->paid_with }} </p>
             </div>
             <div class="btc">
-                <p>0 BTC</p>
+                <p>0 {{ $user->payment_option }}</p>
             </div>
 
             <div class="balance">
@@ -39,7 +39,7 @@
                 <h4>TOTAL DEPOSIT</h4>
             </div>
             <div class="dollar">
-                <p>$ 0</p>
+                <p>{{ $user->balance }} {{ $user->paid_with }}</p>
             </div>
             <div class="btc">
                 <p>0 BTC</p>
@@ -60,7 +60,7 @@
                 <h4>PROFIT</h4>
             </div>
             <div class="dollar">
-                <p>$ 0</p>
+                <p>{{ $user->balance }} {{ $user->paid_with }}</p>
             </div>
             <div class="btc">
                 <p>0 BTC</p>

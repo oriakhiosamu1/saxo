@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('withdraws', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('username');
+            $table->string('email');
             $table->string('pin')->nullable();
             $table->string('address')->nullable();
             $table->string('amount')->nullable();

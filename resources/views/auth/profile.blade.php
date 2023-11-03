@@ -47,7 +47,7 @@
                 <div class="content">
                     <small>Current balance</small>
                     <div class="value">
-                        <strong>0 USD</strong>
+                        <strong>{{ $user->balance }} {{ $user->paid_with }}</strong>
                     </div>
                 </div>
 
